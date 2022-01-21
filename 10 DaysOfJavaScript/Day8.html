@@ -1,0 +1,42 @@
+<!-- 
+The button's id is btn.
+The button's initial text label is 0 After each click, the button must increment by 1
+Recall that the button's text label is the JS object's innerHTML property.
+The button has the following style properties:
+A width of 96px.
+A height of 48px.
+The font-size attribute is 24px. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        #btn {
+            width: 96px;
+            height: 48px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="btn">0</button>
+
+    <script>
+        let btnObject = document.querySelector("#btn")
+        // btnObject.innerHTML = 
+        let counter = 0;
+        btnObject.addEventListener("click", function () {
+            counter++
+            btnObject.innerHTML = counter
+
+        })
+    </script>
+</body>
+
+</html>

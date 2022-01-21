@@ -1,0 +1,95 @@
+<!-- 
+The button's id is btn.
+The button's initial text label is 0 After each click, the button must increment by 1
+Recall that the button's text label is the JS object's innerHTML property.
+The button has the following style properties:
+A width of 96px.
+A height of 48px.
+The font-size attribute is 24px. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 30%;
+            height: 48px;
+            font-size: 24px;
+            position: relative;
+        }
+
+        .grid {
+            /* display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; */
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2rem auto;
+            width: 75%;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <button type="button" class="btn" id="btn1">1</button>
+        <button type="button" class="btn" id="btn2">2</button>
+        <button type="button" class="btn" id="btn3">3</button>
+        <button type="button" class="btn" id="btn4">4</button>
+        <button type="button" class="btn" id="btn5">5</button>
+        <button type="button" class="btn" id="btn6">6</button>
+        <button type="button" class="btn" id="btn7">7</button>
+        <button type="button" class="btn" id="btn8">8</button>
+        <button type="button" class="btn" id="btn9">9</button>
+    </div>
+
+
+    <script>
+        let btnObject5 = document.querySelector("#btn5");
+        let buttons = document.getElementsByTagName("button");
+
+        let btnObject4 = document.querySelector("#btn4");
+        let btnObject3 = document.querySelector("#btn3");
+        let btnObject2 = document.querySelector("#btn2");
+        let btnObject1 = document.querySelector("#btn1");
+        let btnObject6 = document.querySelector("#btn6");
+        let btnObject7 = document.querySelector("#btn7");
+        let btnObject8 = document.querySelector("#btn8");
+        let btnObject9 = document.querySelector("#btn9");
+
+
+        console.log(buttons)
+        btnObject5.addEventListener("click", function () {
+            [btnObject1.innerHTML,
+            btnObject2.innerHTML,
+            btnObject3.innerHTML,
+            btnObject4.innerHTML,
+            btnObject6.innerHTML,
+            btnObject7.innerHTML,
+            btnObject8.innerHTML,
+            btnObject9.innerHTML] =
+                [btnObject4.innerHTML,
+                btnObject1.innerHTML,
+                btnObject2.innerHTML,
+                btnObject7.innerHTML,
+                btnObject3.innerHTML,
+                btnObject8.innerHTML,
+                btnObject9.innerHTML,
+                btnObject6.innerHTML]
+        })
+    </script>
+</body>
+
+</html>
